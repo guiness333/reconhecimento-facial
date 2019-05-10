@@ -10,7 +10,7 @@ from kivy.uix.floatlayout import FloatLayout
 class Widgets(FloatLayout):
     def login(self,user,password):
         if user != ' ' and password != ' ':
-            print("logou")
+            rec()
     pass
     #def __init__(self, **kwargs):
         #super(LoginScreen, self).__init__(**kwargs)

@@ -1,1 +1,3 @@
-*.yml
+classificadorLBPH.yml
+classificadorFisher.yml
+classificadorEigen.yml
