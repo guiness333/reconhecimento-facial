@@ -1,0 +1,25 @@
+
+<Widgets>:
+	BoxLayout:
+		orientation: 'vertical'
+		padding: 20
+		Label:
+			text: "<LOGIN>"
+		TextInput:
+			id: user
+			text: "Usuario"
+			multiline: False
+			size_hint: 1,.5
+		TextInput:
+			id: pwd 
+			text: "Senha"
+			multiline: False
+			password: True
+			size_hint: 1,.5
+		FloatLayout:
+			size: 100,100
+			Button:
+				text: "Logar"
+				size_hint: .5,.5
+				pos_hint: {'center_x': .5,'center_y':.5}
+				on_press: root.login(user.text,pwd.text)
