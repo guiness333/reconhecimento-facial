@@ -17,11 +17,11 @@ class Widgets(FloatLayout):
         id = login(usuario,senha)
         if id != None:
             id = ','.join([str(i) for i in id])
-            info = ("id "+id+" logado com sucesso" )
+            self.info = ("id "+id+" logado com sucesso" )
             print("id "+id+" logado com sucesso ")
             rec()
         else:
-            info = "login ou senha incorretos"
+            self.info = "login ou senha incorretos"
             print("login ou senha incorretos")
             
            
