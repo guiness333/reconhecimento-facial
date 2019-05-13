@@ -1,17 +1,31 @@
 import kivy
 kivy.require('1.10.1')
 from reconhecedor_LBPH import rec
+from sqlConnector import login
 from kivy.app import App
 from kivy.uix.label import Label
 from kivy.uix.widget import Widget
 from kivy.uix.textinput import TextInput
 from kivy.uix.floatlayout import FloatLayout
+from kivy.properties import ObjectProperty, StringProperty
 
 class Widgets(FloatLayout):
-    def login(self,user,password):
-        if user != ' ' and password != ' ':
+
+    info = StringProperty()
+
+    def login(self,usuario, senha):
+        id = login(usuario,senha)
+        if id != None:
+            id = ','.join([str(i) for i in id])
+            info = ("id "+id+" logado com sucesso" )
+            print("id "+id+" logado com sucesso ")
             rec()
-    pass
+        else:
+            info = "login ou senha incorretos"
+            print("login ou senha incorretos")
+            
+           
+    #pass
     #def __init__(self, **kwargs):
         #super(LoginScreen, self).__init__(**kwargs)
        # self.cols = 2
