@@ -2,3 +2,4 @@
 /classificadorFisher.yml
 /classificadorEigen.yml
 /*.yml
+fotos/
